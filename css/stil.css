@@ -1,0 +1,175 @@
+/* =====================================================================
+   BiblioAdmin – css/stil.css
+   Cursul 5: stilul propriu, încărcat DUPĂ Bootstrap.
+   Bootstrap (Reboot) înlocuiește resetul din Cursul 3, iar grila, navbar-ul,
+   cardurile și utilitarele înlocuiesc Grid-ul și Flexbox-ul scrise de mână.
+   Aici rămân doar culorile, fonturile și detaliile aplicației.
+   ===================================================================== */
+
+/* ---------- 1. Variabilele Bootstrap, redefinite pentru BiblioAdmin ---------- */
+:root {
+  --bs-body-font-family: "Open Sans", sans-serif;
+  --bs-body-color: #444444;
+  --bs-body-bg: #f6f9ff;
+  --bs-primary: #4154f1;
+  --bs-primary-rgb: 65, 84, 241;
+  --bs-link-color: #4154f1;
+  --bs-link-color-rgb: 65, 84, 241;
+  --bs-link-hover-color: #717ff5;
+  --bs-link-hover-color-rgb: 113, 127, 245;
+  --bs-border-color: #e3e9f7;
+}
+h1, h2, h3, h4, h5 {
+  font-family: "Nunito", sans-serif;
+}
+
+/* ---------- 2. Stilurile din Laboratorul 2 (restrânse la conținutul paginii) ---------- */
+main ul, main ol {
+  font-family: 'Merriweather', serif;
+}
+ul.detalii {
+  color: #2E4374;
+  font-size: 0.875rem;     /* 14px */
+}
+ol.pasi {
+  color: #6355A5;
+  font-size: 0.8125rem;    /* 13px */
+}
+main a:link {
+  color: #4154f1;          /* legătură nevizitată */
+  text-decoration: underline dotted;
+}
+main a:visited {
+  color: #6355A5;          /* legătură vizitată */
+}
+main a:hover {
+  color: #012970;          /* mouse deasupra */
+  text-decoration: underline solid;
+}
+main a:active {
+  color: #d6336c;          /* în momentul click-ului */
+}
+
+/* ---------- 3. Antetul ---------- */
+header.navbar {
+  height: 60px;
+}
+.logo-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #012970;
+}
+.navbar-brand img {
+  max-height: 26px;
+}
+.comuta {
+  font-size: 32px;
+  line-height: 1;
+  color: #012970;
+}
+
+/* ---------- 4. Meniul lateral ---------- */
+.meniu {
+  --bs-offcanvas-width: 300px;
+  --bs-offcanvas-bg: #FFFFFF;
+}
+.meniu .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #012970;
+}
+.meniu .nav-link i {
+  margin-right: 10px;
+  color: #899bbd;
+}
+.meniu .nav-link .sageata {
+  margin: 0 0 0 auto;      /* săgeata ajunge la capătul rândului */
+  transition: transform 0.2s;
+}
+.meniu .nav-link:not(.collapsed) .sageata {
+  transform: rotate(180deg);
+}
+.meniu .nav-link.active,
+.meniu .nav-link:not(.collapsed) {
+  color: #4154f1;
+  background-color: #f6f9ff;
+}
+.meniu .nav-link.active i,
+.meniu .nav-link:not(.collapsed) i {
+  color: #4154f1;
+}
+.submeniu {
+  padding-top: 5px;
+}
+.submeniu .nav-link {
+  padding: 10px 0 10px 40px;
+  font-size: 14px;
+}
+.submeniu .nav-link i {
+  margin-right: 8px;
+  font-size: 6px;
+}
+
+/* ---------- 5. Zona de conținut ---------- */
+.titlu {
+  font-size: 24px;
+  font-weight: 600;
+  color: #012970;
+}
+.card {
+  --bs-card-border-radius: 0;
+  --bs-card-border-color: #e3e9f7;
+}
+.card-title {
+  font-size: 1.125rem;     /* 18px */
+  font-weight: 600;
+  color: #6355A5;
+}
+.carte h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #6355A5;
+}
+
+/* Banner: fundal imagine, înălțime minimă (se adaptează singur) */
+.banner {
+  min-height: 200px;
+  background-color: #c7d2ff;
+  background-image: url("../imagini/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.banner-text {
+  width: 90%;
+  max-width: 500px;
+  background-color: rgba(1, 41, 112, 0.65);
+}
+
+/* Indicatori */
+.stat-icon {
+  font-size: 32px;
+  color: #4154f1;
+}
+.stat-valoare {
+  font-size: 28px;
+  color: #012970;
+}
+.stat-text {
+  color: #899bbd;
+}
+
+/* ---------- 6. Subsolul ---------- */
+.subsol {
+  font-size: 14px;
+  color: #012970;
+  border-top: 1px solid #cddfff;
+}
+.subsol .credit {
+  margin-top: 5px;
+  font-size: 13px;
+}
